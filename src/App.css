@@ -1,38 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-container {
+  width: 960px;
+  max-width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.label {
+  display: block;
+  width: 300px;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.label span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 80%;
+}
+
+.label.valid {
+  background-color: #D4EDDA;
+}
+
+.label.invalid {
+  background-color: #F8D7DA;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00d4ff;
   color: white;
+  border-radius: 5px;
+  border: 0;
+  margin: 30px 0;
+  font-size: 1.2em;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.converterBlock textarea {
+  padding: 10px;
+  background-color: #f5f5f5;
+  outline: none;
+  width: 100%;
 }
